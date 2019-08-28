@@ -736,7 +736,7 @@ classdef Tracker < handle
             end
             
             perf = struct();
-            for i = 1:numel(params) % todo: must be `parfor`
+            parfor i = 1:numel(params) % todo: must be `parfor`
                 delta = params(i).delta;
                 unmatchedCost = params(i).unmatchedCost;
 
